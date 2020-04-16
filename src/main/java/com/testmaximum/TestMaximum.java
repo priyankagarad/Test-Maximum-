@@ -21,23 +21,33 @@ public class TestMaximum
     //Method to Find Maximum Number
     public static double findMaximumFloat( double firstNumber,double secondNumber,double thirdNumber)
     {
-        double maximumNumber=0;
-        if(firstNumber>secondNumber && firstNumber>thirdNumber)
+        double maximumNumber = 0;
+        if (firstNumber > secondNumber && firstNumber > thirdNumber)
         {
-            return maximumNumber=firstNumber;
-        }
-        else if (secondNumber>firstNumber && secondNumber>thirdNumber)
+            return maximumNumber = firstNumber;
+        } else if (secondNumber > firstNumber && secondNumber > thirdNumber)
         {
-            return maximumNumber=secondNumber;
+            return maximumNumber = secondNumber;
+        } else {
+            return maximumNumber = thirdNumber;
         }
-        else
+    }
+    public String findMaximumString(String string1,String string2,String string3)
+    {
+        String maximumString=string1;
+        if(string2.compareTo(maximumString)>0)
         {
-            return maximumNumber=thirdNumber;
+            maximumString=string2;
         }
+        if(string3.compareTo(maximumString)>0)
+        {
+            maximumString=string3;
+        }
+        return maximumString;
     }
     public static void main(String args[])
     {
-        //Welcome message display
-        System.out.println("Welcome to Test Maximum");
+        //Welcome Message
+        System.out.println("Welcome To Test maximum");
     }
 }
