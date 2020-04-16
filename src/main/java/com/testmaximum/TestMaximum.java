@@ -1,49 +1,36 @@
 package com.testmaximum;
-public class TestMaximum
+public class TestMaximum < V extends Comparable <V> >
 {
-    //Method to Find Maximum Integer Number
-    public static int findMaximumInteger(int firstNumber,int secondNumber,int thirdNumber)
+    //class parameter
+    V firstValue;
+    V secondValue;
+    V thirdValue;
+
+    //default constructor
+    public TestMaximum()
     {
-        int maximumNumber=0;
-        if(firstNumber>secondNumber && firstNumber>thirdNumber)
-        {
-            return maximumNumber=firstNumber;
-        }
-        else if (secondNumber>firstNumber && secondNumber>thirdNumber)
-        {
-            return maximumNumber=secondNumber;
-        }
-        else
-        {
-            return maximumNumber=thirdNumber;
-        }
+
     }
-    //Method to Find Maximum Number
-    public static double findMaximumFloat( double firstNumber,double secondNumber,double thirdNumber)
+    //Paramerized Constructor
+    public TestMaximum(V firstValue,V secondValue,V thirdValue)
     {
-        double maximumNumber = 0;
-        if (firstNumber > secondNumber && firstNumber > thirdNumber)
-        {
-            return maximumNumber = firstNumber;
-        } else if (secondNumber > firstNumber && secondNumber > thirdNumber)
-        {
-            return maximumNumber = secondNumber;
-        } else {
-            return maximumNumber = thirdNumber;
-        }
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
+        this.thirdValue = thirdValue;
     }
-    public String findMaximumString(String string1,String string2,String string3)
+    // Generic Method to find Maximum Value
+    public V findMaximumValue(V firstValue,V secondValue,V thirdValue)
     {
-        String maximumString=string1;
-        if(string2.compareTo(maximumString)>0)
+        V maximumValue=firstValue;
+        if(secondValue.compareTo(maximumValue)>0)
         {
-            maximumString=string2;
+            maximumValue=secondValue;
         }
-        if(string3.compareTo(maximumString)>0)
+        if(thirdValue.compareTo(maximumValue)>0)
         {
-            maximumString=string3;
+            maximumValue=thirdValue;
         }
-        return maximumString;
+        return maximumValue;
     }
     public static void main(String args[])
     {
