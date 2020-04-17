@@ -37,4 +37,9 @@ public class TestMaximum < V extends Comparable <V> >
         //Welcome Message
         System.out.println("Welcome To Test maximum");
     }
+    // Internally call findMaximum
+    public <V extends Comparable<V>> V findMaximumValue()
+    {
+        return (V) findMaximumValue(firstValue,secondValue,thirdValue);
+    }
 }
